@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+@font-face {
+  font-family: din-regular;
+  src: url(../../../resources/DIN-Regular.ttf); }
+
+@font-face {
+  font-family: praktika;
+  src: url(../../../resources/PraktikaRounded-Bold.ttf);
+  font-weight: bold; }
+
+@font-face {
+  font-family: praktika;
+  src: url(../../../resources/PraktikaRounded-Light.ttf);
+  font-weight: normal; }
+
+/*Dimensions*/
+/*animations*/
+/*colors*/
+/*go from biggest width to smallest.*/
+/*less than max width*/
+h1 {
+  font-family: praktika;
+  font-size: 3rem;
+  color: red;
+  font-weight: normal; }
+  @media (max-width: 768px) {
+    h1 {
+      font-weight: bold;
+      color: blue; } }
+  @media (max-width: 1024px) {
+    h1 {
+      color: orange; } }
+  @media (max-width: 375px) {
+    h1 {
+      color: green; } }
+
+h2 {
+  font-size: 2.4rem; }
+
+p,
+em {
+  font-size: 1.5rem; }
+
+.splash__text {
+  font-family: praktika;
+  font-weight: bold;
+  font-size: 2.2rem; }
+
+.main-area {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden; }
+
+.header {
+  position: relative;
+  width: 100vw;
+  height: 11rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 4.1rem 0;
+  transition: all 800ms;
+  border: 2px solid grey;
+  border-radius: 0 0 0 70px; }
+  .header--centered {
+    height: calc( 50vh + 11rem - calc(2.8rem / 2) - 4.1rem);
+    transform: translate(calc(50vw), 0); }
+  .header__logo {
+    z-index: 2;
+    height: 2.8rem;
+    margin-left: 6rem; }
+
+.splash {
+  height: 5rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -2.5rem 0 0 -9.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .splash__text {
+    vertical-align: middle;
+    color: #485165;
+    user-select: none; }
+  .splash__dots {
+    display: flex; }
+  .splash__dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: #e73843;
+    margin: 0 0.35rem; }
+    .splash__dot:nth-child(3) {
+      width: 3.7rem; }
+  .splash--hidden {
+    display: none; }

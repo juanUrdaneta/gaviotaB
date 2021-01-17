@@ -1,0 +1,36 @@
+.splash {
+  height: 5rem;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  margin: -2.5rem 0 0 -9.85rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__text {
+    vertical-align: middle;
+    color: $gray-blue;
+    user-select: none;
+  }
+  &__dots {
+    display: flex;
+  }
+  &__dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: $red;
+    margin: 0 0.35rem;
+    &:nth-child(3) {
+      width: 3.7rem;
+    }
+  }
+  &--hidden {
+    display: none;
+  }
+}

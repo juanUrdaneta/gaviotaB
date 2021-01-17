@@ -1,0 +1,25 @@
+/*go from biggest width to smallest.*/
+/*less than max width*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: $phone) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-ver {
+    @media (max-width: $tablet-ver) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-hor {
+    @media (max-width: $tablet-hor) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (max-width: $desktop) {
+      @content;
+    }
+  }
+}
