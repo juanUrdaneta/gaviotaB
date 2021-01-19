@@ -1,5 +1,8 @@
 gsap.registerPlugin(CSSRulePlugin);
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
 const dimensions = {
   headerHeight: gsap.getProperty(".header", "height"),
   headerWidth: gsap.getProperty(".header", "width"),
@@ -61,14 +64,16 @@ tl.from(".splash", {
   delay: ANIM_DURATION * 1,
   ease: "none",
   opacity: 0,
-  top: "53vh",
+  // top: "calc(var(--vh,1vh)*53)",
+  top: 53 * vh,
 });
 tl.to(".splash", {
   duration: ANIM_DURATION * 0.4,
   delay: ANIM_DURATION * 1,
   ease: "none",
   opacity: 0,
-  top: "47vh",
+  // top: "calc(var(--vh,1vh)*47)",
+  top: 47 * vh,
 });
 tl.from(".header", {
   duration: ANIM_DURATION * 0.4,
@@ -95,7 +100,6 @@ tl.to(".header", {
   height: "11rem",
   onComplete: () => {
     document.querySelector(".header").classList.remove("header--centered");
-    document.querySelector(".grid").classList.remove("grid--absolute");
     document.querySelector(".splash").classList.add("splash--hidden");
   },
   left: 0,
@@ -105,8 +109,8 @@ tl.from(
   {
     duration: ANIM_DURATION * 1.5,
     opacity: 0,
-    transform: "translate(25vw,0)",
-    scaleX: "1.5",
+    left: "50vw",
+    // width: "150%",
     ease: "power2.inOut",
     stagger: {
       each: 0.25,

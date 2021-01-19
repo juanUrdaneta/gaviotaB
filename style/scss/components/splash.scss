@@ -4,8 +4,8 @@
   z-index: 3;
 
   position: fixed;
-  top: 50vh;
-  left: 50%;
+  top: calc(var(--vh, 1vh) * 50);
+  left: 50vw;
 
   margin: -2.5rem 0 0 -9.85rem;
 
