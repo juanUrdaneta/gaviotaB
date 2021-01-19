@@ -1,7 +1,8 @@
 .grid {
-  position: relative;
+  position: absolute;
+  top: 11rem;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 11rem);
 
   display: grid;
 
@@ -36,10 +37,5 @@
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(auto-fit, 25vh);
     grid-auto-rows: 25vh;
-  }
-
-  &--absolute {
-    position: absolute;
-    top: 11rem;
   }
 }
