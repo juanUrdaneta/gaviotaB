@@ -81,7 +81,8 @@ tl.to(
 );
 tl.to(".header", {
   duration: 1,
-  ease: "power2.inOut",
+  delay: 0.4,
+  ease: "power2.inut",
   transform: "translate(0,0)",
   height: "11rem",
   onStart: () =>
