@@ -110,7 +110,7 @@ tl.from(
     duration: ANIM_DURATION * 1.5,
     opacity: 0,
     left: "50vw",
-    // width: "150%",
+    scaleX: 1.5,
     ease: "power2.inOut",
     stagger: {
       each: 0.25,
