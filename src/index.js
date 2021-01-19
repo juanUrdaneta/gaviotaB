@@ -8,6 +8,8 @@ const dimensions = {
   logoMarginLeft: gsap.getProperty(".header__logo", "marginLeft"),
 };
 
+const gridElems = document.querySelectorAll(".grid__item");
+
 const fixedDimensions = {
   headerHeight: {
     phone: "8rem",
@@ -21,6 +23,8 @@ const VIEW_BREAKPOINTS = {
   tablet_hor: 768,
   desktop: 1920,
 };
+
+const ANIM_DURATION = 1;
 
 const setDimension = (el) => {
   const windowWidth = window.innerWidth;
@@ -53,39 +57,62 @@ const tl = gsap.timeline();
 const headerBefore = CSSRulePlugin.getRule(".header::before");
 
 tl.from(".splash", {
-  duration: 0.4,
-  delay: 1,
+  duration: ANIM_DURATION * 0.4,
+  delay: ANIM_DURATION * 1,
   ease: "none",
   opacity: 0,
   top: "53vh",
 });
 tl.to(".splash", {
-  duration: 0.4,
-  delay: 1,
+  duration: ANIM_DURATION * 0.4,
+  delay: ANIM_DURATION * 1,
   ease: "none",
   opacity: 0,
   top: "47vh",
 });
 tl.from(".header", {
-  duration: 0.4,
-  delay: 0.5,
+  duration: ANIM_DURATION * 0.4,
+  delay: ANIM_DURATION * 0.5,
   ease: "power.in",
   top: "2rem",
   opacity: 0,
 });
-tl.to(headerBefore, { duration: 1.5, width: "2rem", ease: "power2.in" });
+tl.to(headerBefore, {
+  duration: ANIM_DURATION * 1.5,
+  width: "2rem",
+  ease: "power2.in",
+});
 tl.to(
   headerBefore,
-  { duration: 1.5, height: "0rem", ease: "power2.out" },
+  { duration: ANIM_DURATION * 1.5, height: "0rem", ease: "power2.out" },
   "-=.4"
 );
 tl.to(".header", {
-  duration: 1,
-  delay: 0.4,
+  duration: ANIM_DURATION * 1,
+  delay: ANIM_DURATION * 0.4,
   ease: "power2.inut",
   transform: "translate(0,0)",
   height: "11rem",
-  onStart: () =>
-    document.querySelector(".header").classList.remove("header--centered"),
+  onComplete: () => {
+    document.querySelector(".header").classList.remove("header--centered");
+    document.querySelector(".grid").classList.remove("grid--absolute");
+    document.querySelector(".splash").classList.add("splash--hidden");
+  },
   left: 0,
 });
+tl.from(
+  gridElems,
+  {
+    duration: ANIM_DURATION * 1.5,
+    opacity: 0,
+    transform: "translate(25vw,0)",
+    scaleX: "1.5",
+    ease: "power2.inOut",
+    stagger: {
+      each: 0.25,
+      grid: "auto",
+      axis: "y",
+    },
+  },
+  "-=1"
+);
