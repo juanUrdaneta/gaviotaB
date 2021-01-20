@@ -27,3 +27,22 @@ em {
   font-weight: bold;
   font-size: 2.2rem;
 }
+
+.grid__item {
+  &__date {
+    font-family: din-regular;
+    font-weight: bold;
+    font-size: 1.2rem;
+    user-select: none;
+  }
+  &__title {
+    font-family: praktika;
+    font-weight: bold;
+    user-select: none;
+  }
+  &__description {
+    font-family: din-regular;
+    font-weight: normal;
+    user-select: none;
+  }
+}

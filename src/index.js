@@ -13,12 +13,7 @@ const dimensions = {
 
 const gridElems = document.querySelectorAll(".grid__item");
 
-const fixedDimensions = {
-  headerHeight: {
-    phone: "8rem",
-    desktop: "11rem",
-  },
-};
+const ANIM_DURATION = 1;
 
 const VIEW_BREAKPOINTS = {
   phone: 375,
@@ -26,8 +21,6 @@ const VIEW_BREAKPOINTS = {
   tablet_hor: 768,
   desktop: 1920,
 };
-
-const ANIM_DURATION = 1;
 
 const setDimension = (el) => {
   const windowWidth = window.innerWidth;

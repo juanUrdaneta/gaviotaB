@@ -13,20 +13,88 @@
 
   &__item {
     position: relative;
-    background-color: grey;
-    border: 1px solid black;
     border-radius: 0 0 0 6rem;
     margin-top: -5.5rem;
-    left: 0;
+    padding: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+
+    &__text {
+      transition: 200ms;
+      &:active {
+        transform: scale(1.05);
+      }
+    }
+
+    &__date {
+      margin-top: 3rem;
+    }
+    &__title {
+      margin-top: 1rem;
+    }
+    &__description {
+      margin-top: 0.5rem;
+    }
 
     @for $i from 1 to 13 {
       &:nth-child(#{$i}) {
         z-index: calc(13 - #{$i});
+        background-color: rgb(255, calc(#{$i} / 20), calc(#{$i} * 20));
+      }
+    }
+    &:nth-child(10) {
+      z-index: 1;
+      margin-right: -5.5rem;
+    }
+    &:nth-child(11) {
+      z-index: 2;
+      margin-right: -5.5rem;
+    }
+    &:nth-child(12) {
+      z-index: 3;
+      margin-right: -5.5rem;
+    }
+
+    @include respond(tablet-vertical) {
+      &:nth-child(10) {
+        z-index: 3;
+      }
+      &:nth-child(11) {
+        z-index: 1;
+        margin-right: -5.5rem;
+      }
+      &:nth-child(12) {
+        z-index: 2;
+        margin-right: -5.5rem;
+      }
+    }
+
+    @include respond(tablet-hor) {
+      &:nth-child(10) {
+        z-index: 3;
+      }
+      &:nth-child(11) {
+        z-index: 2;
+        margin-right: -5.5rem;
+      }
+      &:nth-child(12) {
+        z-index: 1;
+        margin-right: -5.5rem;
       }
     }
   }
 
   @include respond(tablet-vertical) {
+    @for $i from 1 to 12 {
+      &:nth-child(#{$i}) {
+        grid-row: initial;
+        grid-column: initial;
+      }
+    }
     height: auto;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fit, 25vh);
