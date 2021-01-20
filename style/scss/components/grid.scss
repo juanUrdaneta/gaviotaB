@@ -41,19 +41,48 @@
     @for $i from 1 to 13 {
       &:nth-child(#{$i}) {
         z-index: calc(13 - #{$i});
-        background-color: rgb(255, calc(#{$i} / 20), calc(#{$i} * 20));
       }
+    }
+    &:nth-child(1) {
+      background-color: $gray-blue;
+    }
+    &:nth-child(2) {
+      background-color: $red;
+    }
+    &:nth-child(3) {
+      background-color: $date;
+    }
+    &:nth-child(4) {
+      background-color: $black;
+    }
+    &:nth-child(5) {
+      background-color: $white;
+    }
+    &:nth-child(6) {
+      background-color: $gray-blue;
+    }
+    &:nth-child(7) {
+      background-color: $red;
+    }
+    &:nth-child(8) {
+      background-color: $date;
+    }
+    &:nth-child(9) {
+      background-color: $black;
     }
     &:nth-child(10) {
       z-index: 1;
+      background-color: $white;
       margin-right: -5.5rem;
     }
     &:nth-child(11) {
       z-index: 2;
+      background-color: $gray-blue;
       margin-right: -5.5rem;
     }
     &:nth-child(12) {
       z-index: 3;
+      background-color: $red;
       margin-right: -5.5rem;
     }
 
