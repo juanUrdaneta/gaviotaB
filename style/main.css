@@ -79,11 +79,22 @@ em {
   overflow-x: hidden;
   overflow-y: scroll; }
 
+.grid {
+  z-index: 1; }
+
+.header {
+  z-index: 2; }
+
+.splash {
+  z-index: 3; }
+
+.modal {
+  z-index: 4; }
+
 .header {
   position: relative;
   width: 100vw;
   height: 11rem;
-  z-index: 3;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -125,7 +136,6 @@ em {
 
 .splash {
   height: 5rem;
-  z-index: 3;
   position: fixed;
   top: calc(var(--vh, 1vh) * 50);
   left: 50vw;
@@ -158,8 +168,7 @@ em {
   height: calc(100vh - 11rem);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  z-index: 1; }
+  grid-template-rows: repeat(4, 1fr); }
   .grid__item {
     position: relative;
     border-radius: 0 0 0 6rem;

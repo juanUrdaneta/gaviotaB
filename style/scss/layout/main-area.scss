@@ -7,3 +7,16 @@
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
+.grid {
+  z-index: 1;
+}
+.header {
+  z-index: 2;
+}
+.splash {
+  z-index: 3;
+}
+.modal {
+  z-index: 4;
+}

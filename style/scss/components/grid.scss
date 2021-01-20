@@ -9,8 +9,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
 
-  z-index: 1;
-
   &__item {
     position: relative;
     border-radius: 0 0 0 6rem;
