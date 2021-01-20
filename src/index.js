@@ -78,12 +78,12 @@ tl.from(".header", {
 tl.to(headerBefore, {
   duration: ANIM_DURATION * 1.5,
   width: "2rem",
-  ease: "power2.in",
+  ease: "none",
 });
 tl.to(
   headerBefore,
   { duration: ANIM_DURATION * 1.5, height: "0rem", ease: "power2.out" },
-  "-=4"
+  "-=.4"
 );
 tl.to(".header", {
   duration: ANIM_DURATION * 1,
