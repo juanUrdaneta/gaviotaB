@@ -1,18 +1,5 @@
 h1 {
-  font-family: praktika;
   font-size: 3rem;
-  color: red;
-  font-weight: normal;
-  @include respond(tablet-hor) {
-    font-weight: bold;
-    color: blue;
-  }
-  @include respond(tablet-ver) {
-    color: orange;
-  }
-  @include respond(phone) {
-    color: green;
-  }
 }
 h2 {
   font-size: 2.4rem;
@@ -44,5 +31,46 @@ em {
     font-family: din-regular;
     font-weight: normal;
     user-select: none;
+  }
+}
+
+.modal {
+  &__post {
+    &__go-back {
+      &__text {
+        & > p {
+          font-family: din-regular;
+          font-weight: 900;
+          font-size: 1.8rem;
+          letter-spacing: 0.1rem;
+          -webkit-text-stroke: 0.5px $black;
+          color: $black;
+          user-select: none;
+        }
+      }
+    }
+    &__date {
+      font-family: din-regular;
+      font-weight: bold;
+      font-size: 1.8rem;
+      letter-spacing: 0.1rem;
+      color: $date;
+    }
+    &__title {
+      font-family: praktika;
+      font-weight: bold;
+      font-size: 3.5rem;
+      letter-spacing: 0.1rem;
+      font-stretch: condensed;
+      color: $title;
+    }
+    &__description {
+      font-family: din-regular;
+      font-size: 1.6rem;
+      font-weight: normal;
+      letter-spacing: 0;
+      font-stretch: condensed;
+      color: $text;
+    }
   }
 }

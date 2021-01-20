@@ -1,2 +1,84 @@
 .modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  &__nav-right {
+    width: 16rem;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+  }
+  &__nav-left {
+    width: 16rem;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  &__left {
+    width: 50%;
+    height: 100%;
+
+    padding: 11rem 18rem 15rem 15rem;
+
+    background-color: white;
+  }
+  &__post {
+    width: 56rem;
+    padding: 1rem;
+    &__go-back {
+      & span {
+        display: inline-block;
+        width: auto;
+        transition: transform 200ms;
+        &:hover {
+          transform: translate(0, -0.2rem) scale(1.01);
+        }
+        &:active {
+          transform: translate(0, 0.2rem) scale(0.99);
+        }
+      }
+    }
+    &__date {
+      margin-top: 3rem;
+    }
+    &__title {
+      margin-top: 1rem;
+    }
+    &__video {
+      margin-top: 2.5rem;
+    }
+  }
+  &__pictures {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border-radius: 0 0 0 6rem;
+
+    &__container {
+      height: 100%;
+      border-radius: 0 0 0 6rem;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > img {
+        transition: 400ms;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+      }
+    }
+  }
 }

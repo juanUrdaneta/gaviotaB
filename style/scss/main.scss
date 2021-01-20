@@ -8,8 +8,6 @@
 body {
   height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 @import "./abstracts/_abstracts.scss";
