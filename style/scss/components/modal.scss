@@ -148,6 +148,7 @@
       }
     }
     &__description {
+      margin-top: 2rem;
       max-width: 100%;
       @include respond(tablet-hor) {
         margin-top: 2rem;

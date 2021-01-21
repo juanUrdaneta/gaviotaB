@@ -13,7 +13,7 @@ const dimensions = {
 
 const gridElems = document.querySelectorAll(".grid__item");
 
-const ANIM_DURATION = 0.3;
+const ANIM_DURATION = 1;
 
 const computeCenter = () => {
   let left = 0;

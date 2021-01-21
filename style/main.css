@@ -561,6 +561,7 @@ h2 {
         .modal__post__title {
           margin-top: 2rem; } }
     .modal__post__description {
+      margin-top: 2rem;
       max-width: 100%; }
       @media (max-width: 768px) {
         .modal__post__description {
