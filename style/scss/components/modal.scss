@@ -3,44 +3,130 @@
   width: 100vw;
   height: 100vh;
   background-color: white;
-  display: none;
+
+  transform: translate(100vw, 0); // display: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--hidden {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    // display: none;
+  }
   &__nav-right {
+    z-index: 2;
+    position: relative;
     width: 16rem;
-    height: 100%;
-    position: absolute;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: 0;
     top: 0;
     background-color: transparent;
   }
   &__nav-left {
+    position: relative;
+    z-index: 2;
     width: 16rem;
-    height: 100%;
-    position: absolute;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     left: 0;
     top: 0;
     background-color: transparent;
   }
 
+  &__nav-left > span,
+  &__nav-right > span {
+    transition: transform 200ms;
+    @include respond(tablet-vertical) {
+      opacity: 0;
+      width: 10rem;
+      pointer-events: none;
+      user-select: none;
+    }
+    &:hover {
+      transform: translate(0, -0.2rem) scale(1.01);
+    }
+    &:active {
+      transform: translate(0, 0.2rem) scale(0.99);
+    }
+  }
+
   &__content {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    &--shown {
+      opacity: 1;
+      pointer-events: all;
+    }
+    @include respond(tablet-ver) {
+    }
+    @include respond(tablet-hor) {
+      flex-direction: column-reverse;
+      // overflow-y: scroll;
+    }
   }
 
   &__left {
-    width: 50%;
+    width: 55%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 11rem 0;
+    background-color: $white;
 
-    padding: 11rem 18rem 15rem 15rem;
+    @include respond(tablet-vertical) {
+      padding: 0;
+    }
 
-    background-color: white;
+    @include respond(tablet-hor) {
+      width: 95%;
+      padding: 5rem;
+      height: auto;
+    }
+    @include respond(phone) {
+      padding: 1rem;
+    }
   }
   &__post {
-    width: 56rem;
-    padding: 1rem;
+    width: 70rem;
+    height: 100%;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    &--left {
+      padding-left: 1rem;
+      align-items: flex-start;
+    }
+    @include respond(tablet-hor) {
+      width: 100%;
+      align-items: flex-start;
+    }
     &__go-back {
+      &__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+      }
       & span {
-        display: inline-block;
         width: auto;
         transition: transform 200ms;
         &:hover {
@@ -52,34 +138,99 @@
       }
     }
     &__date {
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
     &__title {
       margin-top: 1rem;
+      width: 80%;
+      @include respond(tablet-hor) {
+        margin-top: 2rem;
+      }
+    }
+    &__description {
+      max-width: 100%;
+      @include respond(tablet-hor) {
+        margin-top: 2rem;
+      }
+    }
+    &__video-container {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      margin-top: 5rem;
     }
     &__video {
-      margin-top: 2.5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &--facebook {
+        width: 100%;
+        height: calc(9 / 16 * 100%);
+        margin-top: 5rem;
+      }
+      &--left {
+        max-width: 56rem;
+      }
     }
   }
   &__pictures {
+    position: relative;
     width: 50%;
     height: 100%;
     background-color: white;
     border-radius: 0 0 0 6rem;
-
+    &__nav {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      &--left,
+      &--right {
+        transition: 400ms;
+        &:hover {
+          transform: translate(0, -0.2rem) scale(1.01);
+        }
+        &:active {
+          transform: translate(0, 0.2rem) scale(0.99);
+        }
+      }
+    }
     &__container {
+      position: relative;
+      z-index: 1;
       height: 100%;
+      width: 100%;
       border-radius: 0 0 0 6rem;
-      overflow: hidden;
+      overflow: scroll;
       display: flex;
       justify-content: center;
       align-items: center;
       & > img {
-        transition: 400ms;
+        position: absolute;
+        vertical-align: middle;
+        transform: translate(100%, 0);
         width: 100%;
         height: auto;
-        border-radius: 0;
+        &:nth-child(1) {
+          transform: translate(0, 0);
+        }
+        @include respond(tablet-hor) {
+          width: 100%;
+        }
       }
+    }
+
+    @include respond(tablet-hor) {
+      width: 100%;
+      height: 50vw;
+      top: 0;
     }
   }
 }

@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style/main.css" />
   </head>
   <body>
     <main class="main-area">
-      <div class="splash">
+      <div id="splash" class="splash">
         <p class="splash__text">THE BEST OF 2020</p>
         <div class="splash__dots">
           <div class="splash__dot"></div>
@@ -36,7 +40,7 @@
         <div class="header__langs"></div>
       </div>
       <div class="grid">
-        <div class="grid__item">
+        <div class="grid__item" data-key="0">
           <div class="grid__item__text">
             <p class="grid__item__date">DICIEMBRE 2020</p>
             <h2 class="grid__item__title">
@@ -49,11 +53,11 @@
             </p>
           </div>
         </div>
-        <div class="grid__item">
+        <div class="grid__item" data-key="1">
           <div class="grid__item__text">
             <p class="grid__item__date">NOVIEMBRE 2020</p>
             <h2 class="grid__item__title">
-              Campeones del mundo de moto3 ¡Grande Albert!
+              CAMPEONES DEL MUNDO DE MOTO3 <span>¡GRANDE ALBERT!</span>
             </h2>
             <p class="grid__item__description">
               Estaba cantado que Albert iba a llegar lejos. Estaba y está
@@ -62,7 +66,7 @@
             </p>
           </div>
         </div>
-        <div class="grid__item">
+        <div class="grid__item" data-key="2">
           <div class="grid__item__text">
             <p class="grid__item__date">OCTUBRE 2020</p>
             <h2 class="grid__item__title">
@@ -74,11 +78,11 @@
             </p>
           </div>
         </div>
-        <div class="grid__item">
+        <div class="grid__item" data-key="3">
           <div class="grid__item__text">
             <p class="grid__item__date">SEPTIEMBRE 2020</p>
             <h2 class="grid__item__title">
-              GLASS BY GAVIOTA. SOMOS CLAROS COMO EL CRISTAL.
+              GLASS BY GAVIOTA. SOMOS CLAROS <span> COMO EL CRISTAL.</span>
             </h2>
             <p class="grid__item__description">
               Con un tiempo tan impredecible puede cambiar en cualquier momento
@@ -87,22 +91,25 @@
             </p>
           </div>
         </div>
-        <div class="grid__item">
+        <div class="grid__item" data-key="4">
           <div class="grid__item__text">
-            <p class="grid__item__date">AGOSTO 2020</p>
-            <h2 class="grid__item__title">
-              CLIMATOLOGY#2 CLIMATIKA. un fenómeno atmosférico
+            <p class="grid__item__date color--black">AGOSTO 2020</p>
+            <h2 class="grid__item__title color--black">
+              CLIMATOLOGY#2 CLIMATIKA. <span> UN FENOMENO ATMOSFERICO</span>
             </h2>
-            <p class="grid__item__description">
+            <p class="grid__item__description color--black">
               Elegante, robusta, con la tornillería oculta, con un diseño
               personalizable y con posibilidad de ponerle un motor. […]
             </p>
           </div>
         </div>
-        <div class="grid__item">
+        <div class="grid__item" data-key="5">
           <div class="grid__item__text">
             <p class="grid__item__date">JULIO 2020</p>
-            <h2 class="grid__item__title">CLIMATOLOGY#1 CLIMA 120.</h2>
+            <h2 class="grid__item__title">
+              CLIMATOLOGY#1 CLIMA 120.
+              <span>SE AVECINA UN TIEMPO APACIBLE.</span>
+            </h2>
             <p class="grid__item__description">
               Sí. Un clima apacible y único gracias a su facilidad de montaje, a
               su cortavientos Igloo y a su posibilidad de una segunda lona
@@ -110,21 +117,12 @@
             </p>
           </div>
         </div>
-        <div class="grid__item">
-          <div class="grid__item__text">
-            <p class="grid__item__date">MARZO - ABRIL 2020</p>
-            <h2 class="grid__item__title">#LACARRERADENUESTRAVIDA #JUNTOS</h2>
-            <p class="grid__item__description">
-              El momento donde tenemos que estar mas unidos ha llegado, las
-              difíciles circunstancias nos llevan a la felicidad, este es el […]
-            </p>
-          </div>
-        </div>
-        <div class="grid__item">
+        <div class="grid__item" data-key="6">
           <div class="grid__item__text">
             <p class="grid__item__date">MAYO 2020</p>
             <h2 class="grid__item__title">
-              ALAND “El secreto mejor guardado por fin fue desvelado”
+              ALAND “EL SECRETO MEJOR
+              <span> GUARDADO POR FIN FUE DESVELADO" </span>
             </h2>
             <p class="grid__item__description">
               Su nombre es… ALAND y destaca por sus elegantes lineas rectas,
@@ -133,43 +131,63 @@
             </p>
           </div>
         </div>
-        <div class="grid__item">
+        <div class="grid__item" data-key="7">
           <div class="grid__item__text">
             <p class="grid__item__date">MARZO - ABRIL 2020</p>
-            <h2 class="grid__item__title">#LACARRERADENUESTRAVIDA #JUNTOS</h2>
+            <h2 class="grid__item__title">
+              #LACARRERADENUESTRAVIDA <span> #JUNTOS </span>
+            </h2>
             <p class="grid__item__description">
               El momento donde tenemos que estar mas unidos ha llegado, las
               difíciles circunstancias nos llevan a la felicidad, este es el […]
             </p>
           </div>
         </div>
-        <div class="grid__item">
+
+        <!-- <div class="grid__item" data-key="8">
+          <div class="grid__item__text">
+            <p class="grid__item__date">MARZO - ABRIL 2020</p>
+            <h2 class="grid__item__title">
+              <span> #LACARRERADENUESTRAVIDA </span> #JUNTOS
+            </h2>
+            <p class="grid__item__description">
+              El momento donde tenemos que estar mas unidos ha llegado, las
+              difíciles circunstancias nos llevan a la felicidad, este es el […]
+            </p>
+          </div>
+        </div> -->
+        <div class="grid__item" data-key="8">
           <div class="grid__item__text">
             <p class="grid__item__date">FEBRERO 2020</p>
-            <h2 class="grid__item__title">#SOSTENIBILIDAD #SOLUCIONESECO</h2>
+            <h2 class="grid__item__title">
+              <span> #SOSTENIBILIDAD </span>#SOLUCIONESECO
+            </h2>
             <p class="grid__item__description">
               En Gaviota llevamos años trabajando en soluciones ECO para cuidar
               al máximo el medio ambiente y con este nuevo sistema […]
             </p>
           </div>
         </div>
-        <div class="grid__item">
+        <div class="grid__item" data-key="9">
           <div class="grid__item__text">
-            <p class="grid__item__date">FEBRERO 2020</p>
-            <h2 class="grid__item__title">#5000FOLOWERS #WEAREGAVIOTA</h2>
-            <p class="grid__item__description">
+            <p class="grid__item__date color--black">FEBRERO 2020</p>
+            <h2 class="grid__item__title color--black">
+              <span> #5000FOLOWERS </span> #WEAREGAVIOTA
+            </h2>
+            <p class="grid__item__description color--black">
               Mientras seguimos evolucionando en un mercado global, el
               compromiso y el esfuerzo del gran equipo humano de compone el
               Grupo Gaviota […]
             </p>
           </div>
         </div>
-        <div class="grid__item">
+        <div class="grid__item" data-key="10">
           <!-- ESTA ES LA DE PRESENTACION -->
           <div class="grid__item__text">
             <p class="grid__item__date">ENERO 2020</p>
             <h2 class="grid__item__title">
-              ¡Gaviota Italia y Gaviota Francia estrenan nueva web!
+              ¡GAVIOTA ITALIA Y GAVIOTA FRANCIA
+              <span> ESTRENAN NUEVA WEB! </span>
             </h2>
             <p class="grid__item__description">
               Seguimos creciendo y facilitando nuevas herramientas para nuestros
@@ -177,20 +195,311 @@
             </p>
           </div>
         </div>
+        <div class="grid__item grid__item__xpec">
+          <div class="splash splash__xpec">
+            <p class="splash__text">THE BEST OF 2020</p>
+            <div class="splash__dots">
+              <div class="splash__dot"></div>
+              <div class="splash__dot"></div>
+              <div class="splash__dot"></div>
+              <div class="splash__dot"></div>
+              <div class="splash__dot"></div>
+              <div class="splash__dot"></div>
+              <div class="splash__dot"></div>
+              <div class="splash__dot"></div>
+              <div class="splash__dot"></div>
+              <div class="splash__dot"></div>
+            </div>
+          </div>
+          <p>
+            <b>GRUPO GAVIOTA 2021</b> c Todos los derechos reservados | Aviso
+            Legal Web by Promokore.com
+          </p>
+        </div>
       </div>
       <div class="modal">
-        <div class="modal__nav-left"></div>
-        <div class="modal__nav-right"></div>
-        <div class="modal__content">
+        <div class="modal__nav-left">
+          <span class="material-icons nav-left"> keyboard_arrow_left </span>
+        </div>
+        <div class="modal__nav-right">
+          <span class="material-icons nav-right"> keyboard_arrow_right </span>
+        </div>
+
+        <div class="modal__content modal__content_0">
+          <div class="modal__left">
+            <div class="modal__post modal__post--left">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
+              </div>
+              <p class="modal__post__date modal__post__date--left">
+                DICIEMBRE 2020
+              </p>
+              <h2 class="modal__post__title modal__post__title--left">
+                ¡NOS VISITA EL ASPAR TEAM CON ALBERT ARENAS!
+              </h2>
+              <p
+                class="modal__post__description modal__post__description--left"
+              >
+                Esta semana recibimos la visita del Aspar Team a nuestras
+                instalaciones. Jorge Martinez "Aspar", Gino Borsoi y Albert
+                conocieron de primera mano nuestro showroom y diferentes
+                productos como nuestra pergola #Climatika y nuestros
+                cerramíentos acristálados. Aquí una muestra en 360º para que
+                disfrutes "in situ" el momento. ¡GRACIAS ALBERT!
+              </p>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=280&href=https%3A%2F%2Fwww.facebook.com%2FGaviotaGroup%2Fvideos%2F738978920048895%2F&show_text=false&width=560"
+                width="560"
+                class="modal__post__video--facebook"
+                height="280"
+                style="border: none"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              ></iframe>
+            </div>
+          </div>
+          <div class="modal__pictures">
+            <div class="modal__pictures__nav">
+              <span class="modal__pictures__nav--left material-icons"
+                >keyboard_arrow_left</span
+              >
+              <span class="modal__pictures__nav--right material-icons"
+                >keyboard_arrow_right</span
+              >
+            </div>
+
+            <div class="modal__pictures__container">
+              <img
+                class="modal__pictures_1"
+                src="./resources/pictures/1.jpg"
+                alt=""
+              />
+              <img
+                class="modal__pictures_2"
+                src="./resources/pictures/2.jpg"
+                alt=""
+              />
+              <img
+                class="modal__pictures_3"
+                src="./resources/pictures/3.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__content modal__content_1">
           <div class="modal__left">
             <div class="modal__post">
               <div class="modal__post__go-back">
-                <span class="modal__post__go-back__text"><p>VOLVER</p></span>
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
               </div>
-              <p class="modal__post__date">DICIEMBRE 2020</p>
+              <p class="modal__post__date">NOVIEMBRE 2020</p>
               <h2 class="modal__post__title">
-                ¡NOS VISITA EL ASPAR TEAM CON ALBERT ARENAS!
+                CAMPEONES DEL MUNDO DE MOTO3 ¡GRANDE ALBERT!
               </h2>
+              <p class="modal__post__description">
+                Estaba cantado que Albert iba a llegar lejos. Estaba y está
+                cantado. Anier pone letra al tiempo y a un año que merece tener
+                melodía y rima. “Curvas y rectas, una lucha constante en el
+                presente. Si no el tiempo te pasa por delante”. El hit de este
+                año se llama Albert Arenas. El hit de este año se llama ‘Nuevos
+                Tiempos’. El hit de este año se llama Glass by Gaviota .
+                Escuchad. Disfrutad. Compartid. Temazo. www.nuevostiempos.tv
+              </p>
+              <div class="modal__post__video-container">
+                <iframe
+                  width="560"
+                  height="315"
+                  class="modal__post__video"
+                  src="https://www.youtube.com/embed/0_LtSjOZZHE"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__content modal__content_2">
+          <div class="modal__left">
+            <div class="modal__post">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
+              </div>
+              <p class="modal__post__date">OCTUBRE 2020</p>
+              <h2 class="modal__post__title">
+                NUEVOS MANUALES DE MONTAJE - HERRAMIENTAS ACTUALES
+              </h2>
+              <p class="modal__post__description">
+                El Grupo Gaviota en su constante búsqueda de ofrecer las más
+                altas calidades tanto en sus productos como en las herramientas
+                para sus clientes. Estamos desarrollando una nueva serie de
+                videos de manuales de montaje de productos como ALAND, CLIMA
+                12O, CLIMATIKA & CLIMA RAIN. Periódicamente publicaremos
+                actualizaciones de nuevos manuales.
+              </p>
+              <div class="modal__post__video-container">
+                <iframe
+                  width="560"
+                  class="modal__post__video"
+                  src="https://www.youtube.com/embed/RI5vb_oWEt4"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="modal__post__video-container">
+                <iframe
+                  width="560"
+                  class="modal__post__video"
+                  src="https://www.youtube.com/embed/fTSxOqLGw5o"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__content modal__content_3">
+          <div class="modal__left">
+            <div class="modal__post">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
+              </div>
+              <p class="modal__post__date">SEPTIEMBRE 2020</p>
+              <h2 class="modal__post__title">
+                GLASS BY GAVIOTA. SOMOS CLAROS COMO EL CRISTAL.
+              </h2>
+              <p class="modal__post__description">
+                Este pasado fin de semana ha sido uno de los más fríos que se
+                recuerdan en un mes de agosto. Pero, parece ser, que ha sido un
+                espejismo y las temperaturas van a subir. Y mucho. El tiempo es
+                impredecible. Y si el clima cambia, todo cambia. Bienvenido a tu
+                propio clima. Bienvenido a Glass: la nueva empresa de
+                cerramientos acristalados surgida de Gaviota, una marca líder
+                con más de medio siglo de experiencia. No sabemos qué tiempo va
+                a hacer ahí fuera. Sin embargo, tú puedes ser el dueño de tu
+                tiempo.
+              </p>
+              <div class="modal__post__video-container">
+                <iframe
+                  width="560"
+                  height="315"
+                  class="modal__post__video"
+                  src="https://www.youtube.com/embed/oq10mcll3sA"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="modal__post__video-container">
+                <iframe
+                  width="560"
+                  height="315"
+                  class="modal__post__video"
+                  src="https://www.youtube.com/embed/qsqZHE1CcWM"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="modal__post__video-container">
+                <iframe
+                  width="560"
+                  height="315"
+                  class="modal__post__video"
+                  src="https://www.youtube.com/embed/VWixgd1JXXQ"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__content modal__content_4">
+          <div class="modal__left">
+            <div class="modal__post">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
+              </div>
+              <p class="modal__post__date">AGOSTO 2020</p>
+              <h2 class="modal__post__title">
+                CLIMATOLOGY #2 CLIMÁTIKA. Un fenómeno atmosférico.
+              </h2>
+              <p class="modal__post__description">
+                Un fenómeno en pérgolas. Elegante, robusta, con la tornillería
+                oculta, con un diseño personalizable, estanca y con posibilidad
+                de motorizarla. Cómprate una CLIMÁTIKA y luego ya te comprarás
+                la casa; total, ahí ya puedes vivir. CLIMÁTIKA proporciona una
+                pureza de líneas gracias a sus perfiles de 160 x 160 milímetros
+                que son compatibles con los acristalamientos de la marca.
+                También se caracteriza por su posibilidad de refuerzo extra para
+                conexión entre postes y vigas en caso de sobrecarga por nieve o
+                viento, dando opción al igual de elección de dirección de
+                apertura de lamas y la incorporación de luces Led en lama y
+                estructura.
+              </p>
+              <div class="modal__post__video-container">
+                <iframe
+                  width="560"
+                  height="315"
+                  class="modal__post__video"
+                  src="https://www.youtube.com/embed/QyV6vlmvv3E"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__content modal__content_5">
+          <div class="modal__left">
+            <div class="modal__post">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
+              </div>
+              <p class="modal__post__date">JULIO 2020</p>
+              <h2 class="modal__post__title">CLIMA 120 CLIMATOLOGY#1</h2>
               <p class="modal__post__description">
                 Esta semana recibimos la visita del Aspar Team a nuestras
                 instalaciones. Jorge Martinez "Aspar", Gino Borsoi y Albert
@@ -202,7 +511,7 @@
               <iframe
                 src="https://www.facebook.com/plugins/video.php?height=280&href=https%3A%2F%2Fwww.facebook.com%2FGaviotaGroup%2Fvideos%2F738978920048895%2F&show_text=false&width=560"
                 width="560"
-                class="modal__post__video"
+                class="modal__post__video--facebook"
                 height="280"
                 style="border: none; overflow: hidden"
                 scrolling="no"
@@ -213,14 +522,223 @@
               ></iframe>
             </div>
           </div>
-          <div class="modal__pictures">
-            <div class="modal__pictures__nav"></div>
-            <div class="modal__pictures__container">
-              <img src="./resources/pictures/test.jpg" alt="" />
+        </div>
+
+        <div class="modal__content modal__content_6">
+          <div class="modal__left">
+            <div class="modal__post">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
+              </div>
+              <p class="modal__post__date">MAYO 2020</p>
+              <h2 class="modal__post__title">
+                ALAND “El secreto mejor guardado por fin fue desvelado”
+              </h2>
+              <p class="modal__post__description">
+                Cofre cuadrado de elegante línea para diseños minimalistas.
+                Aland está recomendado hasta 6,00 x 4,00 m. y es compatible con
+                brazos Premium y Concept, ofreciendo una regulación frontal de
+                la inclinación de los brazos. Asimismo, permite quitar el perfil
+                registro sin necesidad de desmontar el cofre y también se puede
+                personalizar, puesto que podemos añadir luces Led tanto en el
+                perfil del cofre como en los brazos.
+                https://www.gaviotagroup.com/producto/aland/
+              </p>
+              <div class="modal__post__video-container">
+                <iframe
+                  width="560"
+                  height="315"
+                  class="modal__post__video"
+                  src="https://www.youtube.com/embed/jUSqfhRgmIQ"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__content modal__content_7">
+          <div class="modal__left">
+            <div class="modal__post">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
+              </div>
+              <p class="modal__post__date">MARZO - ABRIL 2020</p>
+              <h2 class="modal__post__title">
+                #LACARRERADENUESTRAVIDA #JUNTOS
+              </h2>
+              <p class="modal__post__description">
+                El momento donde tenemos que estar mas unidos ha llegado, las
+                difíciles circunstancias nos llevan a la felicidad, este es el
+                instante donde estar #juntos es la clave, para volver a trabajar
+                en #equipo y vibrar como nunca antes, para regresar a
+                #LaCarreraDeNuestraVIDA . Nuestro reconocimiento, fuerza, unión
+                y solidaridad es para tod@s ell@s que han dedicado su vida a
+                ayudar. Gracias. #QuedateEnCasa
+              </p>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGaviotaGroup%2Fvideos%2F642937786484901%2F&show_text=false&width=560"
+                width="560"
+                height="314"
+                class="modal__post__video--facebook"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen="true"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="modal__content modal__content_8">
+          <div class="modal__left">
+            <div class="modal__post">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"><p><span class="material-icons nav-left"> keyboard_arrow_left </span>VOLVER</p></span>
+              </div>
+              <p class="modal__post__date">MARZO - ABRIL 2020</p>
+              <h2 class="modal__post__title">
+                #LACARRERADENUESTRAVIDA #JUNTOS
+              </h2>
+              <p class="modal__post__description">
+                El Grupo Gaviota en su constante búsqueda de ofrecer las más
+                altas calidades tanto en sus productos como en las herramientas
+                para sus clientes. Estamos desarrollando una nueva serie de
+                videos de manuales de montaje de productos como ALAND, CLIMA
+                12O, CLIMATIKA & CLIMA RAIN. Periódicamente publicaremos
+                actualizaciones de nuevos manuales.
+              </p>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2FGaviotaGroup%2Fvideos%2F302241220761466%2F&show_text=false&width=560"
+                width="560"
+                height="315"
+                class="modal__post__video--facebook"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen="true"
+              ></iframe>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="modal__content modal__content_8">
+          <div class="modal__left">
+            <div class="modal__post">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
+              </div>
+              <p class="modal__post__date">FEBRERO 2020</p>
+              <h2 class="modal__post__title">#SOSTENIBILIDAD #SOLUCIONESECO</h2>
+              <p class="modal__post__description">
+                En Gaviota llevamos años trabajando en soluciones ECO para
+                cuidar al máximo el medio ambiente y con este nuevo sistema
+                ahorraremos la impresión de más de 2.000.000 de páginas a todo
+                color. Accede de manera instantánea a nuestros manuales de
+                instalación y documentación técnica justo en el momento en que
+                los necesites, desde cualquier dispositivo y sistema operativo.
+              </p>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGaviotaGroup%2Fvideos%2F139530190726601%2F&show_text=false&width=560"
+                width="560"
+                height="314"
+                class="modal__post__video--facebook"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen="true"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__content modal__content_9">
+          <div class="modal__left">
+            <div class="modal__post">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
+              </div>
+              <p class="modal__post__date">FEBRERO 2020</p>
+              <h2 class="modal__post__title">#5000FOLOWERS #WEAREGAVIOTA</h2>
+              <p class="modal__post__description">
+                Mientras seguimos evolucionando en un mercado global, el
+                compromiso y el esfuerzo del gran equipo humano de compone el
+                Grupo Gaviota, hacen que día a día alcancemos y desafiemos
+                nuevos retos y nos hayamos convertido en un referente en el
+                diseño, la fabricación y la distribución de soluciones y
+                estructuras de protección solar.
+              </p>
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=296&href=https%3A%2F%2Fwww.facebook.com%2FGaviotaGroup%2Fvideos%2F202042744332806%2F&show_text=false&width=560"
+                width="560"
+                height="296"
+                class="modal__post__video--facebook"
+                style="border: none; overflow: hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen="true"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__content modal__content_10">
+          <div class="modal__left">
+            <div class="modal__post">
+              <div class="modal__post__go-back">
+                <span class="modal__post__go-back__text"
+                  ><span class="material-icons nav-left">
+                    keyboard_arrow_left
+                  </span>
+                  <p>VOLVER</p></span
+                >
+              </div>
+              <p class="modal__post__date">ENERO 2020</p>
+              <h2 class="modal__post__title">
+                ¡GAVIOTA ITALIA Y GAVIOTA FRANCIA ESTRENAN NUEVA WEB!
+              </h2>
+              <p class="modal__post__description">
+                ¡Gaviota Italia y Gaviota Francia estrenan nueva web! Papa Noel
+                ha llegado antes de tiempo a nuestras oficinas 😊
+                www.gaviotagroup.it & www.gaviotagroup.fr ya están #online ¡Es
+                tiempo de navidad! It’s Christmas time! Feliz Navidad y Próspero
+                Año Nuevo! Compartid, ¡Es tiempo de Navidad!
+              </p>
             </div>
           </div>
         </div>
       </div>
+      <div class="please-resize"><p>Por favor, gire el navegador</p></div>
     </main>
   </body>
   <script
@@ -230,6 +748,7 @@
   ></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
   <script type="module" src="./src/index.js"></script>
   <script type="module" src="./src/eventListeners.js"></script>
 </html>

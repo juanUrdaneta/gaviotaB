@@ -1,0 +1,17 @@
+.please-resize {
+  display: none;
+  @media (max-height: 414px) {
+    z-index: 4;
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    color: $black;
+    font-family: praktika;
+    font-size: 4rem;
+  }
+}

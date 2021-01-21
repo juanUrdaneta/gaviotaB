@@ -3,10 +3,12 @@ h1 {
 }
 h2 {
   font-size: 2.4rem;
-}
-p,
-em {
-  font-size: 1.5rem;
+  @include respond(smaller-text) {
+    font-size: 1.8rem;
+  }
+  @include respond(phone) {
+    font-size: 1.6rem;
+  }
 }
 
 .splash__text {
@@ -17,24 +19,55 @@ em {
 
 .grid__item {
   &__date {
-    font-family: din-regular;
+    font-family: praktika; //cambiar
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     user-select: none;
+    color: $white;
   }
   &__title {
     font-family: praktika;
     font-weight: bold;
     user-select: none;
+    color: $white;
+    & > span {
+      font-size: 2.4rem;
+      @include respond(smaller-text) {
+        font-size: 1.8rem;
+      }
+      @include respond(phone) {
+        font-size: 1.6rem;
+      }
+    }
   }
   &__description {
-    font-family: din-regular;
+    font-size: 1.4rem; //settear fondo, din-reg se rompe en iphone
     font-weight: normal;
     user-select: none;
+    color: $white;
+
+    @include respond(phone) {
+      font-size: 1rem;
+    }
+  }
+  &__xpec {
+    & > p {
+      font-family: praktika;
+      font-size: 1.8rem;
+      & > b {
+        font-weight: bold;
+      }
+    }
   }
 }
 
 .modal {
+  &__nav-left > span,
+  &__nav-right > span {
+    font-size: 10rem;
+    color: $black;
+    user-select: none;
+  }
   &__post {
     &__go-back {
       &__text {
@@ -46,31 +79,79 @@ em {
           -webkit-text-stroke: 0.5px $black;
           color: $black;
           user-select: none;
+
+          @include respond(phone) {
+            font-size: 1.2rem;
+          }
         }
       }
     }
     &__date {
       font-family: din-regular;
+      text-align: center;
       font-weight: bold;
       font-size: 1.8rem;
       letter-spacing: 0.1rem;
       color: $date;
+      &--left {
+        text-align: left;
+      }
+      @include respond(tablet-hor) {
+        text-align: left;
+        font-size: 1.4rem;
+      }
+      @include respond(tablet-hor) {
+        font-size: 1.2rem;
+      }
     }
     &__title {
       font-family: praktika;
+      text-align: center;
       font-weight: bold;
       font-size: 3.5rem;
       letter-spacing: 0.1rem;
       font-stretch: condensed;
       color: $title;
+      &--left {
+        text-align: left;
+      }
+      @include respond(tablet-hor) {
+        text-align: left;
+        font-size: 2.5rem;
+      }
+      @include respond(phone) {
+        font-size: 1.8rem;
+      }
     }
     &__description {
-      font-family: din-regular;
+      // font-family: din-regular;
+      text-align: center;
       font-size: 1.6rem;
       font-weight: normal;
       letter-spacing: 0;
       font-stretch: condensed;
       color: $text;
+      &--left {
+        text-align: left;
+      }
+      @include respond(tablet-hor) {
+        text-align: left;
+      }
     }
   }
+  &__pictures {
+    &__nav {
+      &--left,
+      &--right {
+        font-size: 6rem;
+        user-select: none;
+        color: $white;
+      }
+    }
+  }
+}
+
+.color--black,
+.color--black > span {
+  color: $black;
 }

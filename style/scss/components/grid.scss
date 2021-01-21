@@ -8,14 +8,13 @@
 
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-
   &__item {
     position: relative;
     border-radius: 0 0 0 6rem;
     margin-top: -5.5rem;
     padding: 5rem;
 
-    display: flex;
+    display: block; //flex
     justify-content: center;
     align-items: center;
 
@@ -33,57 +32,88 @@
     }
     &__title {
       margin-top: 1rem;
+      & > span {
+        display: block;
+      }
     }
     &__description {
       margin-top: 0.5rem;
+      @include respond(phone) {
+      }
     }
-
+    @include respond(phone) {
+    }
     @for $i from 1 to 13 {
       &:nth-child(#{$i}) {
         z-index: calc(13 - #{$i});
       }
     }
     &:nth-child(1) {
-      background-color: $gray-blue;
+      background-image: url("../../../resources/pictures/backgroundImages/0.jpg");
+      background-position: top;
+      background-size: cover;
     }
     &:nth-child(2) {
-      background-color: $red;
+      background-image: url(../../../resources/pictures/backgroundImages/1.jpg);
+      background-position: center;
+      background-size: cover;
     }
     &:nth-child(3) {
-      background-color: $date;
+      background-image: url(../../../resources/pictures/backgroundImages/2.jpg);
+      background-position: top;
+      background-size: cover;
     }
     &:nth-child(4) {
-      background-color: $black;
+      background-image: url(../../../resources/pictures/backgroundImages/3.jpg);
+      background-position: center;
+      background-size: cover;
     }
     &:nth-child(5) {
-      background-color: $white;
+      background-image: url(../../../resources/pictures/backgroundImages/4.jpg);
+      background-position: center;
+      background-size: cover;
     }
     &:nth-child(6) {
-      background-color: $gray-blue;
+      background-image: url(../../../resources/pictures/backgroundImages/5.jpg);
+      background-position: center;
+      background-size: cover;
     }
     &:nth-child(7) {
-      background-color: $red;
+      background-image: url(../../../resources/pictures/backgroundImages/6.jpg);
+      background-position: center;
+      background-size: cover;
     }
     &:nth-child(8) {
-      background-color: $date;
+      background-image: url(../../../resources/pictures/backgroundImages/7.jpg);
+      background-position: center;
+      background-size: cover;
     }
     &:nth-child(9) {
-      background-color: $black;
+      background-image: url(../../../resources/pictures/backgroundImages/8.jpg);
+      background-position: center;
+      background-size: cover;
     }
     &:nth-child(10) {
       z-index: 1;
-      background-color: $white;
+      background-image: url(../../../resources/pictures/backgroundImages/9.jpg);
+      background-position: center;
+      background-size: cover;
       margin-right: -5.5rem;
+      padding-right: 5.5rem;
     }
     &:nth-child(11) {
       z-index: 2;
-      background-color: $gray-blue;
+      background-image: url(../../../resources/pictures/backgroundImages/10.jpg);
+      background-position: center;
+      background-size: cover;
       margin-right: -5.5rem;
+      padding-right: 5.5rem;
     }
     &:nth-child(12) {
       z-index: 3;
-      background-color: $red;
+      background-color: $white;
       margin-right: -5.5rem;
+      padding-right: 5.5rem;
     }
 
     @include respond(tablet-vertical) {
@@ -124,13 +154,19 @@
     }
     height: auto;
     grid-template-columns: repeat(2, 1fr);
+
     grid-template-rows: repeat(auto-fit, 25vh);
     grid-auto-rows: 25vh;
   }
-
   @include respond(tablet-hor) {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(auto-fit, 25vh);
-    grid-auto-rows: 25vh;
+    // grid-template-rows: repeat(auto-fit, 20vh);
+    // grid-auto-rows: 20vh;
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
   }
+}
+
+.grid__item__xpec {
+  padding: 15rem 11rem 5rem 5rem;
 }
