@@ -53,12 +53,26 @@ $margin-from-border-phone: 4rem;
 
   &__langs {
     height: 2.8rem;
-    width: 10rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: $margin-from-border;
-    background-color: red;
     @include respond(phone) {
       // height: 2rem;
       margin-right: $margin-from-border-phone;
+    }
+    &__flag {
+      height: 80%;
+      margin-right: 0.8rem;
+      border-radius: 0.5rem;
+      transition: transform 200ms;
+      &:hover {
+        transform: translate(0, -0.2rem) scale(1.01);
+      }
+      &:active {
+        transform: translate(0, 0.2rem) scale(0.99);
+      }
     }
   }
 

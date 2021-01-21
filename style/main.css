@@ -208,12 +208,23 @@ h2 {
         margin-left: 4rem; } }
   .header__langs {
     height: 2.8rem;
-    width: 10rem;
-    margin-right: 6rem;
-    background-color: red; }
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6rem; }
     @media (max-width: 414px) {
       .header__langs {
         margin-right: 4rem; } }
+    .header__langs__flag {
+      height: 80%;
+      margin-right: 0.8rem;
+      border-radius: 0.5rem;
+      transition: transform 200ms; }
+      .header__langs__flag:hover {
+        transform: translate(0, -0.2rem) scale(1.01); }
+      .header__langs__flag:active {
+        transform: translate(0, 0.2rem) scale(0.99); }
   .header--centered {
     height: calc( calc(var(--vh, 1vh) * 50) + 11rem - calc(2.8rem / 2) - 4.1rem);
     transform: translate(50vw, 0); }
